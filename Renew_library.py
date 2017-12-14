@@ -43,7 +43,7 @@ class Library():
         
         return
     
-    def write(self):
+    def record(self):
     
         text_file = open("Your path to the file to write", "a")
         text_file.write('Library books renewed on {0}/{1}/{2}\n'.format(datetime.today().day,\
@@ -95,7 +95,7 @@ if day == 1:
             if len(PASSWORD) == 4 and len(USERNAME) == 11:
                 library = Library(PASSWORD, USERNAME)
                 library.renew()
-                library.write()
+                library.record()
                 break
 
             else:
