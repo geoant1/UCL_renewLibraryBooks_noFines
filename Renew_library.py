@@ -17,7 +17,7 @@ class Library():
         from selenium.webdriver.support import expected_conditions as EC
         from selenium.webdriver.common.by import By
 
-        chromedriver = '/Applications/ChromeDriver/chromedriver'
+        chromedriver = 'Your path to the browser driver'
         browser = webdriver.Chrome(chromedriver)
         browser.get(self.url)
 
@@ -45,7 +45,7 @@ class Library():
     
     def write(self):
     
-        text_file = open("/Users/GA/Desktop/UCL/Library_Loans/Library_Loans.txt", "a")
+        text_file = open("Your path to the file to write", "a")
         text_file.write('Library books renewed on {0}/{1}/{2}\n'.format(datetime.today().day,\
                                                                         datetime.today().month,\
                                                                         datetime.today().year))
