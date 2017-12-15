@@ -3,7 +3,7 @@ import time
 import argparse
 from datetime import datetime
 
-##### TAKE POSITIONAL ARGUMENTS
+##### TAKE ARGUMENTS
 
 parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
 parser.add_argument("-username", help="Your username/barcode, can be found on the back of UCL card", type=str)
@@ -50,6 +50,10 @@ class Library(object):
         browser.quit()
 
         return
+
+    
+#### TRY TO RUN THE CODE WITH ARGUMENTS FROM ARGPARSE
+
 try:
     mylib = Library(args.password, args.username)
     mylib.renew()
@@ -58,7 +62,7 @@ except:
 
 
 
-
+#### COMMENTED OUT FOR NOW SINCE CRONJOB IS PROBABLY BETTER
 
     # def record(self):
     #
