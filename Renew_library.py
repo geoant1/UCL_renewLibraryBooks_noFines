@@ -6,8 +6,8 @@ from datetime import datetime
 ##### TAKE ARGUMENTS #####
 
 parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
-parser.add_argument("-username", help="Your username/barcode, can be found on the back of UCL card", type=str)
-parser.add_argument("-password", help="Your password or PIN, if not changed is set to date and month of you birthday", type=str)
+parser.add_argument("-u", "--username", help="Your username/barcode, can be found on the back of UCL card", type=str)
+parser.add_argument("-p", "--password", help="Your password or PIN, if not changed is set to date and month of you birthday", type=str)
 args = parser.parse_args()
 
 
