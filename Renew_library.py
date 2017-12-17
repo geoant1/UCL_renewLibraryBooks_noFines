@@ -3,7 +3,7 @@ import time
 import argparse
 from datetime import datetime
 
-##### TAKE ARGUMENTS
+##### TAKE ARGUMENTS #####
 
 parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
 parser.add_argument("-username", help="Your username/barcode, can be found on the back of UCL card", type=str)
@@ -50,29 +50,32 @@ class Library(object):
         browser.quit()
 
         return
+    
+    def record(self):
+    
+        text_file = open("Your path to the file to write", "a")
+        text_file.write('Library books renewed on {0}/{1}/{2}\n'.format(datetime.today().day,\
+                                                                        datetime.today().month,\
+                                                                        datetime.today().year))
+        text_file.close()
+    
+        return
 
     
-#### TRY TO RUN THE CODE WITH ARGUMENTS FROM ARGPARSE
+##### TRY TO RUN THE CODE WITH ARGUMENTS FROM ARGPARSE #####
 
 try:
     mylib = Library(args.password, args.username)
     mylib.renew()
-except:
+    mylib.record()
+except Exception, e:
     print "Please add username and password. To invoke help type: ./Renew_library -h"
 
 
 
 #### COMMENTED OUT FOR NOW SINCE CRONJOB IS PROBABLY BETTER
 
-    # def record(self):
-    #
-    #     text_file = open("Your path to the file to write", "a")
-    #     text_file.write('Library books renewed on {0}/{1}/{2}\n'.format(datetime.today().day,\
-    #                                                                     datetime.today().month,\
-    #                                                                     datetime.today().year))
-    #     text_file.close()
-    #
-    #     return
+
 
 # class _check():
 #
