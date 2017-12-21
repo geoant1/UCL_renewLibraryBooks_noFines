@@ -12,11 +12,11 @@ sudo apt-get install chromedriver
 ```
 Then check where it has been installed and move it to bin
 ```
-sudo mv <location of your chromedriver> /usr/bin/
+sudo mv <location of your chromedriver> /usr/local/bin/
 ```
 ### Usage
 Run the script using this command (while in directory of the script):
 ```
-./Renew_library.py -u <your barcode> -p <your password>
+python ./Renew_library.py -u <your barcode> -p <your password>
 ```
 This script can be put in cron to run daily or in autostart to run from the start
