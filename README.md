@@ -37,8 +37,8 @@ EDITOR=nano crontab -e
 ```
 PATH=/Users/'your_user_name'/anaconda2/bin/
 * * * * 2 python2.7 <path to the file to be executed> -u <your username> -p <your password>
-ctrl+O, enter, ctrl+X
 ```
+* Then hit ctrl+O, enter, and ctrl+X. Done.
 * You can list the crontabs by typing
 ```
 crontab -l
