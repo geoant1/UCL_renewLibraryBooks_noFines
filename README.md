@@ -6,7 +6,7 @@ Here's a script with Selenium API to automatically renew library loans not to be
 ```
 sudo pip2 install selenium
 ```
-or
+  or
 ```
 conda install -c conda-forge selenium 
 ```
@@ -24,3 +24,15 @@ Run the script using this command (while in directory of the script):
 python ./Renew_library.py -u <your barcode> -p <your password>
 ```
 This script can be put in cron to run daily or in autostart to run from the start
+
+### Cron
+Put the script into a crontab to execute periodically (e.g. once a week)
+* Create a crontab by typing
+```
+EDITOR=nano crontab -e
+```
+* Enter the job to be executed in the desired format, then ctrl+o, ctrl+x. Done.
+* You can list the crontabs by typing
+```
+crontab -l
+```
