@@ -16,7 +16,7 @@ sudo apt-get install chromedriver
 ```
 Then check where it has been installed and move it to bin
 ```
-sudo mv <location of your chromedriver> /usr/local/bin/
+sudo mv <location of your chromedriver> /Users/'your_user_name'/anaconda2/bin/
 ```
 ### Usage
 Run the script using this command (while in directory of the script):
