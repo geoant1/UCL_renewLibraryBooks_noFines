@@ -2,9 +2,13 @@
 Here's a script with Selenium API to automatically renew library loans not to be exasperated by fines. Make this script run with OSX/whatever reboot.
 
 ### Requirments:
-* Selenium - can be installed via pip or miniconda by running
+* Selenium - can be installed via pip or miniconda (or anaconda) by running
 ```
 sudo pip2 install selenium
+```
+or
+```
+conda install -c conda-forge selenium 
 ```
 * Chromedriver (or geckodriver) in PATH - allows the script to control a browser. Can be installed via normal package manager like homebrew. apt-get or yum, then moved to /usr/bin/
 ```
