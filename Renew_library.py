@@ -1,4 +1,4 @@
-#!/usr/local/bin
+#!/Users/'your_user_name'/anaconda2/bin/python2.7
 import time
 import argparse
 from datetime import datetime
