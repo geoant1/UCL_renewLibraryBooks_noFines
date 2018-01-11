@@ -62,7 +62,7 @@ class Library(object):
         return
 
     
-##### TRY TO RUN THE CODE WITH ARGUMENTS FROM ARGPARSE #####
+##### TRY TO RUN THE CODE WITH THE ARGUMENTS FROM ARGPARSE #####
 
 try:
     mylib = Library(args.password, args.username)
@@ -70,63 +70,3 @@ try:
     mylib.record()
 except Exception, e:
     print "Please add username and password. To invoke help type: ./Renew_library -h"
-
-
-
-##### COMMENTED OUT FOR NOW SINCE CRONJOB IS PROBABLY BETTER #####
-
-
-
-# class _check():
-#
-#     def __init__(self):
-#
-#         self.url = 'https://www.ucl.ac.uk/library/'
-#         self.period = 20
-#
-#     def check(self):
-#
-#         import urllib2
-#
-#         while True:
-#             try:
-#                 answ = urllib2.urlopen(self.url)
-#
-#                 if answ:
-#                     return True
-#                     break
-#
-#                 else: pass
-#
-#             except Exception, e:
-#                 print e, '\n You have no internet connection!'
-#                 time.sleep(self.period)
-#
-# day = datetime.today().weekday()
-# connection = _check()
-#
-# if day == 1:
-#
-#     try:
-#
-#         connection.check()
-#
-#         while True:
-#
-#             USERNAME = raw_input('Please enter your username: ')
-#             PASSWORD = raw_input('Guess the password: ')
-#
-#             if len(PASSWORD) == 4 and len(USERNAME) == 11:
-#                 library = Library(PASSWORD, USERNAME)
-#                 library.renew()
-#                 library.record()
-#                 break
-#
-#             else:
-#                 print '\nPassword or username length does not match!\nTry again:'
-#
-#     except Exception, e:
-#         print e
-#
-# else: pass
-""
