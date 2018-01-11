@@ -17,9 +17,9 @@ conda install -c conda-forge selenium
 ```
 * Chromedriver can be installed via normal package manager like homebrew or downloaded from: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
-* Then check where it has been installed and move it to the same directory as the script
+* Then check where it has been installed and move to bin
 ```
-sudo mv <location of your chromedriver> <location of Renew_library.py>
+sudo mv <location of your chromedriver> /Users/'your user name'/anaconda2/bin
 ```
 ### Usage:
 * Don't forget to change the path for the recording in the record() method of Renew_library.py
