@@ -4,15 +4,14 @@ Here's a script with Selenium API to automatically renew library loans not to be
 ### Requirments:
 * macOS
 * Python 2.7
-* Selenium - can be installed via pip or miniconda (or anaconda) by running
-```
-sudo pip2 install selenium
-```
-  or
+* Anaconda
+* Selenium
+
+* To install Selenium, type in the terminal
 ```
 conda install -c conda-forge selenium 
 ```
-* Chromedriver (or geckodriver) in PATH - allows the script to control a browser. Can be installed via normal package manager like homebrew or downloaded from: https://sites.google.com/a/chromium.org/chromedriver/downloads
+* Chromedriver can be installed via normal package manager like homebrew or downloaded from: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 * Then check where it has been installed and move it to the same directory as the script
 ```
