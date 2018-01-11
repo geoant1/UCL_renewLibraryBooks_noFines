@@ -23,9 +23,9 @@ Run the script using this command (while in directory of the script):
 ```
 python ./Renew_library.py -u <your barcode> -p <your password>
 ```
-This script can be put in cron or launchd to run daily or upon the reboot. NB: cron will execute the script only at the specified time. If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
 
-### Cron
+## Cron
+This script can be put in cron or launchd to run daily or upon the reboot. **NB: cron will execute the script only at the specified time.** If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
 Put the script into a crontab to execute periodically (e.g. once a week)
 * Create a crontab by typing
 ```
@@ -36,12 +36,13 @@ EDITOR=nano crontab -e
 PATH=/Users/'your_user_name'/anaconda2/bin/
 * * * * 2 python2.7 <path to the file to be executed> -u <your username> -p <your password>
 ```
+* Don't forget to replace the first two stars with <minutes> and <hour>
 * Then hit ctrl+O, enter, and ctrl+X. Done.
 * You can list the crontabs by typing
 ```
 crontab -l
 ```
-### Launchd
+## Launchd
 * Download the com.renew_library.plist file and move it to ~/Library/LaunchAgents
 * Change the paths within the file. You can open this file with Sublime or with the terminal
 ```
