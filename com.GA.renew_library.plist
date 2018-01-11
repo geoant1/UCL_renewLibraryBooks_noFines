@@ -8,24 +8,24 @@
         <false/>
     </dict>
     <key>Label</key>
-    <string>com.GA.renew_library</string>
+    <string>"name of the launch agent"</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/GA/Documents/Python/UCL/Renew_library_console.py</string>
+        <string>"full path to the script to be executed"</string>
         <string>-u</string>
-        <string>02852782721</string>
+        <string>"your username"</string>
         <string>-p</string>
-        <string>1108</string>
+        <string>"your password"</string>
     </array>
     <key>StartCalendarInterval</key>
     <array>
         <dict>
             <key>Weekday</key>
-            <integer>3</integer>
+            <integer>1</integer>
             <key>Hour</key>
-            <integer>19</integer>
+            <integer>10</integer>
             <key>Minute</key>
-            <integer>31</integer>
+            <integer>0</integer>
         </dict>
     </array>
 </dict>
