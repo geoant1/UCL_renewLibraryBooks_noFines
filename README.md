@@ -23,7 +23,7 @@ Run the script using this command (while in directory of the script):
 ```
 python ./Renew_library.py -u <your barcode> -p <your password>
 ```
-This script can be put in cron or launchd to run daily or upon a reboot. NB: cron will execute the script only at the specified time. If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
+This script can be put in cron or launchd to run daily or upon the reboot. NB: cron will execute the script only at the specified time. If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
 
 ### Cron
 Put the script into a crontab to execute periodically (e.g. once a week)
@@ -43,7 +43,7 @@ crontab -l
 ```
 ### Launchd
 * Download the com.renew_library.plist file and move it to ~/Library/LaunchAgents
-* Change the paths within the file. You can open this file with Sublime or with terminal
+* Change the paths within the file. You can open this file with Sublime or with the terminal
 ```
 nano -e ~/Library/LaunchAgents/com.renew_library.plist
 ```
@@ -56,6 +56,8 @@ launchctl start -w ~/Library/LaunchAgents/com.renew_library.plist
 ```
 launchctl list | grep renew
 ```
+Now it should work for you!
+
 * To remove the agent, type
 ```
 launchctl unload -w ~/Library/LaunchAgents/com.renew_library.plist
