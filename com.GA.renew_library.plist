@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    <key>Label</key>
+    <string>com.GA.renew_library</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/GA/Documents/Python/UCL/Renew_library_console.py</string>
+        <string>-u</string>
+        <string>02852782721</string>
+        <string>-p</string>
+        <string>1108</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Weekday</key>
+            <integer>3</integer>
+            <key>Hour</key>
+            <integer>19</integer>
+            <key>Minute</key>
+            <integer>31</integer>
+        </dict>
+    </array>
+</dict>
+</plist>
