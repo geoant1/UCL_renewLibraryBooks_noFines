@@ -29,7 +29,7 @@ class Library(object):
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
 
-        browser = webdriver.Chrome('/Applications/ChromeDriver/chromedriver', chrome_options=options)
+        browser = webdriver.Chrome(chrome_options=options)
         browser.get(self.url)
 
         button_login_page = browser.find_element_by_id('loginText')
