@@ -44,7 +44,7 @@ crontab -l
 ```
 ## Launchd
 * Download the com.renew_library.plist file and move it to ~/Library/LaunchAgents
-* Change the paths within the file. You can open this file with Sublime or with the terminal
+* Change the paths within the file. You can open and edit this file with Sublime or with the terminal
 ```
 nano -e ~/Library/LaunchAgents/com.renew_library.plist
 ```
