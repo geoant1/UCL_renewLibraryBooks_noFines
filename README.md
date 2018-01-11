@@ -8,6 +8,8 @@ Here's a script with Selenium API to automatically renew library loans not to be
 * Selenium
 
 ## Installations
+* Anaconda can be installed by following the instructions on https://conda.io/docs/user-guide/install/index.html
+
 * To install Selenium, type in the terminal
 ```
 conda install -c conda-forge selenium 
