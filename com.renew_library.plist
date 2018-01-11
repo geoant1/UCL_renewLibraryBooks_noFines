@@ -8,7 +8,7 @@
         <false/>
     </dict>
     <key>Label</key>
-    <string>"name of the launch agent"</string>
+    <string>renew_library</string>
     <key>ProgramArguments</key>
     <array>
         <string>"full path to the script to be executed"</string>
