@@ -12,20 +12,18 @@ sudo pip2 install selenium
 ```
 conda install -c conda-forge selenium 
 ```
-* Chromedriver (or geckodriver) in PATH - allows the script to control a browser. Can be installed via normal package manager like homebrew. apt-get or yum, then moved to /usr/bin/
+* Chromedriver (or geckodriver) in PATH - allows the script to control a browser. Can be installed via normal package manager like homebrew or downloaded from https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+*Then check where it has been installed and move it to the same directory as the script
 ```
-sudo apt-get install chromedriver
-```
-Then check where it has been installed and move it to bin
-```
-sudo mv <location of your chromedriver> /Users/'your_user_name'/anaconda2/bin/
+sudo mv <location of your chromedriver> <location of Renew_library.py>
 ```
 ### Usage
 Run the script using this command (while in directory of the script):
 ```
 python ./Renew_library.py -u <your barcode> -p <your password>
 ```
-This script can be put in cron to run daily or in autostart to run from the start
+This script can be put in cron or launchd to run daily or upon a reboot. NB: cron will execute the script only at the specified time. If your are on a laptop and not sure that it will always be turned on at that time, skip to launchd section.
 
 ### Cron
 Put the script into a crontab to execute periodically (e.g. once a week)
