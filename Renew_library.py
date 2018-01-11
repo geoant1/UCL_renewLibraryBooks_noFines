@@ -74,4 +74,7 @@ try:
     mylib.renew()
     mylib.record()
 except Exception, e:
-    print "Please add username and password. To invoke help type: ./Renew_library -h"
+    with open("/Users/GA/Desktop/UCL/Library_Loans/Library_Loans.txt", "a") as file:
+        file.write('Something went wrong on {0}/{1}/{2}\nThe error occured: {3}'.format(datetime.today().day,\
+                                                                        datetime.today().month,\
+                                                                        datetime.today().year), e)
