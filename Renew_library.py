@@ -26,7 +26,10 @@ class Library(object):
         from selenium.webdriver.support import expected_conditions as EC
         from selenium.webdriver.common.by import By
 
-        browser = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+
+        browser = webdriver.Chrome('/Applications/ChromeDriver/chromedriver', chrome_options=options)
         browser.get(self.url)
 
         button_login_page = browser.find_element_by_id('loginText')
