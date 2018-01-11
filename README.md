@@ -61,5 +61,5 @@ Now it should work for you!
 * To remove the agent, type
 ```
 launchctl unload -w ~/Library/LaunchAgents/com.renew_library.plist
-launchctl remove <name of the agent specified in the .plist file>
+launchctl remove renew_library
 ```
