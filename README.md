@@ -6,6 +6,7 @@ Here's a script with Selenium API to automatically renew library loans not to be
 * Python 2.7
 * Anaconda
 * Selenium
+* ChromeDriver
 
 ## Installations
 * Anaconda can be installed by following the instructions on https://conda.io/docs/user-guide/install/index.html
