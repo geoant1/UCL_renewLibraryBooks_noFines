@@ -29,6 +29,8 @@ class Library(object):
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
 
+        #If you run this as a launchd, the full path to the chromedriver must be specified:
+        # browser = webdriver.Chrome('full path to the driver', chrome_options=options)
         browser = webdriver.Chrome(chrome_options=options)
         browser.get(self.url)
 
