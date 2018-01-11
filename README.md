@@ -24,7 +24,7 @@ sudo mv <location of your chromedriver> /Users/'your user name'/anaconda2/bin
 ### Usage:
 * Don't forget to change the path for the recording in the record() method of Renew_library.py
 
-* Run the script using this command:
+* Run the script using this command in the terminal:
 ```
 <full path to the script> -u <your barcode> -p <your password>
 ```
@@ -33,7 +33,7 @@ sudo mv <location of your chromedriver> /Users/'your user name'/anaconda2/bin
 ## Cron
 This script can be put in cron or launchd to run daily or upon the reboot. **NB: cron will execute the script only at the specified time.** If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
 
-* Create a cronjob by typing:
+* Create a cronjob by typing in the terminal:
 ```
 EDITOR=nano crontab -e
 ```
