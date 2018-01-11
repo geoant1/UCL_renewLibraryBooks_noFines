@@ -26,7 +26,7 @@ python ./Renew_library.py -u <your barcode> -p <your password>
 
 ## Cron
 This script can be put in cron or launchd to run daily or upon the reboot. **NB: cron will execute the script only at the specified time.** If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
-Put the script into a crontab to execute periodically (e.g. once a week)
+
 * Create a crontab by typing
 ```
 EDITOR=nano crontab -e
