@@ -12,9 +12,9 @@ sudo pip2 install selenium
 ```
 conda install -c conda-forge selenium 
 ```
-* Chromedriver (or geckodriver) in PATH - allows the script to control a browser. Can be installed via normal package manager like homebrew or downloaded from https://sites.google.com/a/chromium.org/chromedriver/downloads
+* Chromedriver (or geckodriver) in PATH - allows the script to control a browser. Can be installed via normal package manager like homebrew or downloaded from: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
-*Then check where it has been installed and move it to the same directory as the script
+* Then check where it has been installed and move it to the same directory as the script
 ```
 sudo mv <location of your chromedriver> <location of Renew_library.py>
 ```
@@ -23,7 +23,7 @@ Run the script using this command (while in directory of the script):
 ```
 python ./Renew_library.py -u <your barcode> -p <your password>
 ```
-This script can be put in cron or launchd to run daily or upon a reboot. NB: cron will execute the script only at the specified time. If your are on a laptop and not sure that it will always be turned on at that time, skip to launchd section.
+This script can be put in cron or launchd to run daily or upon a reboot. NB: cron will execute the script only at the specified time. If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
 
 ### Cron
 Put the script into a crontab to execute periodically (e.g. once a week)
@@ -40,4 +40,24 @@ PATH=/Users/'your_user_name'/anaconda2/bin/
 * You can list the crontabs by typing
 ```
 crontab -l
+```
+### Launchd
+* Download the com.renew_library.plist file and move it to ~/Library/LaunchAgents
+* Change the paths within the file. You can open this file with Sublime or with terminal
+```
+nano -e ~/Library/LaunchAgents/com.renew_library.plist
+```
+* Then in the terminal, type
+```
+launchctl load -w ~/Library/LaunchAgents/com.renew_library.plist
+launchctl start -w ~/Library/LaunchAgents/com.renew_library.plist
+```
+* You can check if it's been loaded
+```
+launchctl list | grep renew
+```
+* To remove the agent, type
+```
+launchctl unload -w ~/Library/LaunchAgents/com.renew_library.plist
+launchctl remove <name of the agent specified in the .plist file>
 ```
