@@ -22,9 +22,9 @@ conda install -c conda-forge selenium
 sudo mv <location of your chromedriver> <location of Renew_library.py>
 ```
 ### Usage
-* Don't forget to change the path for the recording in the record() method
+* Don't forget to change the path for the recording in the record() method of Renew_library.py
 
-* Run the script using this command (while in directory of the script):
+* Run the script using this command (while in the directory of the script):
 ```
 python ./Renew_library.py -u <your barcode> -p <your password>
 ```
