@@ -39,8 +39,7 @@ EDITOR=nano crontab -e
 ```
 * Enter the job to be executed in the desired format. To renew every Tuesday, type
 ```
-PATH=/Users/'your_user_name'/anaconda2/bin/
-* * * * 2 python2.7 <path to the file to be executed> -u <your username> -p <your password>
+* * * * 2 <path to the file to be executed> -u <your username> -p <your password>
 ```
 * Don't forget to replace the first two stars with minutes and hour, respectively
 * Then hit ctrl+O, enter, and ctrl+X. Done.
