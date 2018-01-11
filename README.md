@@ -8,7 +8,7 @@ Here's a script with Selenium API to automatically renew library loans not to be
 * Selenium
 * ChromeDriver
 
-### Installations
+### Installations:
 * Anaconda can be installed by following the instructions on https://conda.io/docs/user-guide/install/index.html
 
 * To install Selenium, type in the terminal
@@ -21,7 +21,7 @@ conda install -c conda-forge selenium
 ```
 sudo mv <location of your chromedriver> <location of Renew_library.py>
 ```
-### Usage
+### Usage:
 * Don't forget to change the path for the recording in the record() method of Renew_library.py
 
 * Run the script using this command (while in the directory of the script):
