@@ -2,7 +2,7 @@
 Here's a script with Selenium API to automatically renew library loans not to be exasperated by fines.
 
 ### Requirments:
-* macOS
+* macOS 10.13 (or higher)
 * Python 2.7
 * Anaconda
 * Selenium
