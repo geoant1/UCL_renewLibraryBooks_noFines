@@ -22,7 +22,12 @@ conda install -c conda-forge selenium
 sudo mv <location of your chromedriver> /Users/'your user name'/anaconda2/bin
 ```
 ### Usage:
-* Don't forget to change the path for the recording in the record() method of Renew_library.py
+* Don't forget to change the path for the logout file in the record() method of Renew_library.py
+
+* Make the script executable:
+```
+chmod +x <full path to Renew_library.py>
+```
 
 * Run the script using this command in the terminal:
 ```
