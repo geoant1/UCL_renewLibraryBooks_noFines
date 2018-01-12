@@ -33,7 +33,7 @@ chmod +x <full path to Renew_library.py>
 ```
 <full path to the script> -u <your barcode> -p <your password>
 ```
-* Check the recordings file for an update
+* Check the loogout file for an update
 
 ## Cron
 This script can be put in cron or launchd to run daily or upon the reboot. **NB: cron will execute the script only at the specified time.** If your are on a laptop and not sure that it will always be turned on at that time, skip to the launchd section.
