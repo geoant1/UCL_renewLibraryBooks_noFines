@@ -96,7 +96,7 @@ def mainloop():
         with open("Your path to the logout file", "a") as file:
             file.write('Something went wrong on {0}/{1}/{2} at {3}\nThe error occured {4}'.format(datetime.today().day,\
                                                                             datetime.today().month,\
-                                                                            datetime.today().year), \
+                                                                            datetime.today().year, \
                                                                             str(datetime.now().time()).split('.')[0],\
                                                                             e)
 
