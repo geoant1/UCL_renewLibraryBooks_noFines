@@ -58,7 +58,7 @@ class Library(object):
     
     def record(self):
     
-        text_file = open("Your path to the file to write", "a")
+        text_file = open("Your path to the logout file", "a")
         text_file.write('Library books renewed on {0}/{1}/{2}\n'.format(datetime.today().day,\
                                                                         datetime.today().month,\
                                                                         datetime.today().year))
@@ -74,7 +74,7 @@ try:
     mylib.renew()
     mylib.record()
 except Exception, e:
-    with open("/Users/GA/Desktop/UCL/Library_Loans/Library_Loans.txt", "a") as file:
+    with open("Your path to the logout file", "a") as file:
         file.write('Something went wrong on {0}/{1}/{2}\nThe error occured: {3}'.format(datetime.today().day,\
                                                                         datetime.today().month,\
                                                                         datetime.today().year), e)
