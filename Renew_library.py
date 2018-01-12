@@ -69,12 +69,32 @@ class Library(object):
     
 ##### TRY TO RUN THE CODE WITH THE ARGUMENTS FROM ARGPARSE #####
 
-try:
-    mylib = Library(args.password, args.username)
-    mylib.renew()
-    mylib.record()
-except Exception, e:
-    with open("Your path to the logout file", "a") as file:
-        file.write('Something went wrong on {0}/{1}/{2}\nThe error occured: {3}'.format(datetime.today().day,\
-                                                                        datetime.today().month,\
-                                                                        datetime.today().year), e)
+def internet_on():
+    '''Check the internet connection'''
+
+    import urllib2
+
+    while True:
+        try:
+            response=urllib2.urlopen('http://google.com', timeout=20)
+            return True
+            break
+        except urllib2.URLError, e: 
+            time.sleep(20)
+            pass
+
+def mainloop():
+
+    connection = internet_on()
+
+    try:
+        mylib = Library(args.password, args.username)
+        mylib.renew()
+        mylib.record()
+    except Exception, e:
+        with open("Your path to the logout file", "a") as file:
+            file.write('Something went wrong on {0}/{1}/{2}\nThe error occured {3}'.format(datetime.today().day,\
+                                                                            datetime.today().month,\
+                                                                            datetime.today().year), e)
+
+mainloop()
