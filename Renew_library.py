@@ -46,8 +46,12 @@ class Library(object):
         login_button = browser.find_element_by_css_selector(".button[value='Login']")
         login_button.click()
 
-        renew_button = WebDriverWait(browser, 0).until(EC.presence_of_element_located((By.ID, "renewAllButton")))
-        renew_button.click()
+        try:
+            renew_button = WebDriverWait(browser, 0).until(EC.presence_of_element_located((By.ID, "renewAllButton")))
+            renew_button.click()
+        except Exception, e:
+            with open("Your path to the logout file", "a") as file:
+                file.write('Could not locate the "renew" button. Check if you have any loans at all')
 
         time.sleep(2)
 
