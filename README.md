@@ -21,6 +21,8 @@ conda install -c conda-forge selenium
 ```
 sudo mv <location of your chromedriver> /Users/'your user name'/anaconda2/bin
 ```
+* NB: always make sure you have the latest version of the driver if your chrome gets updated
+
 ### Usage:
 * Don't forget to change the path for the logout file in the record() method of Renew_library.py
 
