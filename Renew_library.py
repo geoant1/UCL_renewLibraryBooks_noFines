@@ -37,21 +37,25 @@ class Library(object):
         button_login_page = browser.find_element_by_id('loginText')
         button_login_page.click()
 
-        user_entry = WebDriverWait(browser, 0).until(EC.presence_of_element_located((By.ID, "bor_id")))
-        pass_entry = WebDriverWait(browser, 0).until(EC.presence_of_element_located((By.ID, "bor_verification")))
-
+        user_entry = WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.ID, "bor_id")))
+        pass_entry = WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.ID, "bor_verification")))
+        
+        user_entry.click()
+        user_entry.clear()
         user_entry.send_keys(self.username)
+        pass_entry.click()
+        pass_entry.clear()
         pass_entry.send_keys(self.password)
 
         login_button = browser.find_element_by_css_selector(".button[value='Login']")
         login_button.click()
 
         try:
-            renew_button = WebDriverWait(browser, 0).until(EC.presence_of_element_located((By.ID, "renewAllButton")))
+            renew_button = WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.ID, "renewAllButton")))
             renew_button.click()
         except Exception, e:
             with open("Your path to the logout file", "a") as file:
-                file.write('Could not locate the "renew" button. Check if you have any loans at all')
+                file.write('Could not locate the "renew" button. Check if you have any loans at all!')
 
         time.sleep(2)
 
